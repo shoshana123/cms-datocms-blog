@@ -10,6 +10,7 @@ export default function PostPreview({
   excerpt,
   author,
   slug,
+  tags,
 }) {
   return (
     <div>
@@ -30,6 +31,8 @@ export default function PostPreview({
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <Avatar name={author.name} picture={author.picture} />
+      <p className="text-2xl leading-relaxed mb-4 mt-4">Tags: </p>
+      <p className="text-lg leading-relaxed mb-4">{tags}</p>
     </div>
   )
 }
