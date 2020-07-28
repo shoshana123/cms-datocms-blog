@@ -10,6 +10,7 @@ export default function HeroPost({
   excerpt,
   author,
   slug,
+  tags
 }) {
   return (
     <section>
@@ -27,7 +28,7 @@ export default function HeroPost({
               <a className="hover:underline">{title}</a>
             </Link>
           </h3>
-          <div className="mb-4 md:mb-0 text-lg">
+          <div className="mb-4 md:mb-2 text-lg">
             <Date dateString={date} />
           </div>
         </div>
@@ -35,6 +36,10 @@ export default function HeroPost({
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
           <Avatar name={author.name} picture={author.picture} />
         </div>
+        <div style={{display: 'flex', flexDirection: 'column'}}>
+          <h4 className="text-lg leading-relaxed text-3xl">Tags: </h4>
+          <p className="text-lg leading-relaxed mb-4 ">{tags}</p>
+          </div>
       </div>
     </section>
   )

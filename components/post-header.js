@@ -3,7 +3,7 @@ import Date from './date'
 import CoverImage from './cover-image'
 import PostTitle from './post-title'
 
-export default function PostHeader({ title, coverImage, date, author }) {
+export default function PostHeader({ title, coverImage, date, author,tags }) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
@@ -22,6 +22,10 @@ export default function PostHeader({ title, coverImage, date, author }) {
         </div>
         <div className="mb-6 text-lg">
           <Date dateString={date} />
+        </div>
+        <div style={{display: 'flex', flexDirection: 'column'}}>
+          <h4 className="text-lg leading-relaxed text-1xl">Tags: </h4>
+          <p className="text-lg leading-relaxed mb-4 ">{tags}</p>
         </div>
       </div>
     </>
